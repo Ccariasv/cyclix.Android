@@ -5,6 +5,7 @@ import '../screens/admin_api_screen.dart';
 import '../screens/datos_usuario_screen.dart';
 import '../screens/historial_viajes_screen.dart';
 import '../screens/ayuda_screen.dart';
+import '../screens/planes_screen.dart';
 import '../screens/puestos_bicicletas_screen.dart';
 import '../screens/soporte_screen.dart';
 import '../screens/wallet_screen.dart';
@@ -79,6 +80,17 @@ class CyclixDrawer extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const WalletScreen()),
+                );
+              },
+            ),
+            _DrawerTile(
+              icon: Icons.workspace_premium_outlined,
+              title: 'Planes',
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const PlanesScreen()),
                 );
               },
             ),
